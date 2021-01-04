@@ -95,7 +95,7 @@ const Border = styled.div`
   border-top: 2px solid #333;
   border-left: 2px solid #333;
   text-align: right;
-  border-radius: 25px;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   min-width: 500px;

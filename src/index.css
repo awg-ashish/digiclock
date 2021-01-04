@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Iceland&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Iceland&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,5 +7,5 @@
 }
 .blur {
   backdrop-filter: blur(5px);
-  border-radius: 25px;
+  border-radius: 10px;
 }
