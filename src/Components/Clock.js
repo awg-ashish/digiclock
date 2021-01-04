@@ -8,7 +8,7 @@ const Clock = () => {
   const updateClock = () => {
     setTime(new Date());
   };
-  const updateDuration = () => {
+  const updateSession = () => {
     if (Number(time.getHours()) > 12) {
       setSession("PM");
     } else {
@@ -19,7 +19,7 @@ const Clock = () => {
     let interval = setInterval(() => {
       updateClock();
     }, 1000);
-    updateDuration();
+    updateSession();
 
     return () => clearInterval(interval);
   });
@@ -32,6 +32,8 @@ const Clock = () => {
   };
   const formatHours = (t) => {
     let h = Number(t.getHours());
+    let min = Number(t.getMinutes());
+    let sec = Number(t.getSeconds());
     if (h < 10) {
       h = `0${h}`;
     } else if (h > 12 && h < 22) {
@@ -41,14 +43,9 @@ const Clock = () => {
       h = h - 12;
     }
     h = `${h}`;
-    let min = Number(t.getMinutes());
-    if (min < 10) {
-      min = `0${min}`;
-    }
-    let sec = Number(t.getSeconds());
-    if (sec < 10) {
-      sec = `0${sec}`;
-    }
+    min < 10 ? (min = `0${min}`) : (min = `${min}`);
+    sec < 10 ? (sec = `0${sec}`) : (sec = `${sec}`);
+
     return [h, min, sec];
   };
 
